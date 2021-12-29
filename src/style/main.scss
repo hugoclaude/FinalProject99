@@ -1,28 +1,27 @@
-html {
-    font-size: 62.5%; // 1rem is 10px
-}
+@import "./colors.scss";
+@import './mixins.scss';
+@import "./navigation.scss";
+@import "./base.scss";
+@import "./auth";
+@import "./button";
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    font-family: 'montserrat';
-}
 
-body {
-    overflow-x: hidden;
-    font-weight: normal;
+// AUTH
+@import "./signup.scss";
+@import "./form-fields.scss";
+@import "./details.scss";
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent;
-}
+// SHOP
+@import 'shop/shop.scss';
+@import 'shop/shop-search-bar.scss';
+@import 'shop/shop-product.scss';
 
-.app {
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
-}
+// CART
+@import 'shop/shop-cart.scss';
+@import 'shop/cart-product.scss';
+
+// QUANTITY
+@import 'quantity.scss';
+@import 'green-price-tag';
+
+// CHECKOUT

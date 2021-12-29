@@ -1,0 +1,35 @@
+.auth-page-wrapper {
+    display: grid;
+    height: calc(100vh - 84px);
+
+    .card-header {
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        color: $dark-orange;
+    }
+
+    .card-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .95em;
+
+        .login-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $charcoal;
+        }
+
+        .auth-form-wrapper {
+            @include input-element();
+            @include base-grid();
+            align-items: center;
+            grid-gap: 21px;
+            padding: 42px;           
+        }
+    }
+}
