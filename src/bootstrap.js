@@ -6,7 +6,13 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./components/app";
 import reducers from "./reducers";
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware()(
+    compose(
+        (window.devToolsExtension ? window.devToolsExtension() : (f) => f)(
+            createStore
+        )
+    )
+);
 
 import "./style/main.scss";
 
