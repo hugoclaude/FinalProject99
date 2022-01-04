@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import authorize from "../../../controllers/auth";
+// import authorize from "../../../controllers/auth";
 
 export default class Login extends Component {
     constructor(props) {
@@ -24,33 +24,33 @@ export default class Login extends Component {
     }
 
     handleSubmit(event) {
-        <authorize />;
-        // axios
-        //     .post(
-        //         'https://api.devcamp.space/sessions',
-        //         {
-        //             client: {
-        //                 email:this.state.email,
-        //                 password: this.state.password,
-        //             },
-        //         },
-        //         { withCredentials: false }
-        //     )
-        //     .then((response) => {
-        //         if (response.data.status === 'created') {
-        //             console.log('You can come in...');
-        //             console.log('testing testing');
-        //             this.props.handleSuccessfulAuth();
-        //         }
-        //     })
-        //     .catch((error) => {
-        //         this.setState({
-        //             errorText: 'An error occured',
-        //         });
-        //         this.props.handleUnsuccessfulAuth();
-        //     });
+        // <authorize />;
+        axios
+            .post(
+                'https://api.devcamp.space/sessions',
+                {
+                    client: {
+                        email:this.state.email,
+                        password: this.state.password,
+                    },
+                },
+                { withCredentials: false }
+            )
+            .then((response) => {
+                if (response.data.status === 'created') {
+                    console.log('You can come in...');
+                    console.log('testing testing');
+                    this.props.handleSuccessfulAuth();
+                }
+            })
+            .catch((error) => {
+                this.setState({
+                    errorText: 'An error occured',
+                });
+                this.props.handleUnsuccessfulAuth();
+            });
 
-        // event.preventDefault();
+        event.preventDefault();
     }
 
     render() {

@@ -7,7 +7,7 @@ import SignUp from "./pages/signup";
 import Shop from "./shop/shop";
 import Checkout from "./checkout/checkout";
 // import ThankYou from './pages/thankyou';
-// import Profile from './pages/profile';
+import Profile from './pages/profile';
 import Icons from "../helpers/icons";
 
 export default class App extends Component {
@@ -91,11 +91,11 @@ export default class App extends Component {
             //             path="./pages/thank-you"
             //             component={ThankYou}
             //           />,
-            //           <Route
-            //             key="profile"
-            //             path="./pages/profile"
-            //             component={Profile}
-            //           />,
+                      <Route
+                        key="profile"
+                        path="./pages/profile"
+                        component={Profile}
+                      />,
         ];
     }
 
@@ -115,7 +115,6 @@ export default class App extends Component {
                             <Route
                                 exact
                                 path="/"
-                                component={Auth}
                                 render={(props) => (
                                     <Auth
                                         {...props}
@@ -137,8 +136,6 @@ export default class App extends Component {
 
                             <Route
                                 path="/shop"
-                                exact
-                                component={Shop}
                                 render={(props) => (
                                     <Shop
                                         {...props}
@@ -150,8 +147,6 @@ export default class App extends Component {
                             />
                             <Route
                                 path="/checkout"
-                                exact
-                                component={Checkout}
                                 render={(props) => (
                                     <Checkout
                                         {...props}
@@ -166,13 +161,13 @@ export default class App extends Component {
                         render={(props) => (
                             <ThankYou {...props} loggedInStatus={this.state.loggedInStatus} />
                         )}
-                    />
-                    <Route
-                        path='/profile'
-                        render={(props) => (
-                            <Shop {...props} loggedInStatus={this.state.loggedInStatus} />
-                        )}
                     /> */}
+                            <Route
+                                path='/profile'
+                                render={(props) => (
+                                    <Profile {...props} loggedInStatus={this.state.loggedInStatus} />
+                                )}
+                            />
                         </Switch>
                     </div>
                 </Router>

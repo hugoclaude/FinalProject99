@@ -4,7 +4,6 @@
 @import "./base.scss";
 @import "./auth";
 @import "./button";
-@import "./details.scss";
 
 
 // AUTH
@@ -29,3 +28,7 @@
 @import './checkout/checkout.scss';
 @import './checkout/checkoutForm.scss';
 @import './checkout/checkoutProduct.scss';
+
+
+// PROFILE
+@import './profile.scss';

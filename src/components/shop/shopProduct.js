@@ -28,10 +28,10 @@ class ShopProduct extends Component {
         } else {
             document.getElementById("shop-cart").classList.add("cart-hidden");
         }
-    };
+    };  
 
     render() {
-        const { title, description, price } = this.props;
+        const { _id, title, description, price } = this.props;
         return (
             <div className="shop-product">
                 <div className="shop-product__front">
