@@ -55,7 +55,7 @@ class Shop extends Component {
     render() {
         return (
             <div className="shop">
-                <ShopNavbar/>
+                <ShopNavbar className="shop__navbar" />
                 <ShopSearchBar
                     onSubmit={this.onSubmit}
                     className="shop__search-bar"

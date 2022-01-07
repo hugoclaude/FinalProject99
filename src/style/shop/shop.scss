@@ -3,9 +3,14 @@
     grid-column: s/e;
 
     display: grid;
-    grid-template-rows: 15px [search-bar-s] 38px [search-bar-e] 57px [products-s] 1fr [products-e];
+    grid-template-rows: 15px [navbar-s] 10px [navbar-e] 15px [search-bar-s] 38px [search-bar-e] 14px [products-s] 1fr [products-e];
     grid-template-columns: [s] minmax(100px, 1035px) [e];
     justify-content: center;
+
+    &__navbar {
+        grid-row:navbar-s/navbar-e;
+        grid-column: s/e;
+    }
 
     &__search-bar {
         grid-row: search-bar-s/search-bar-e;
