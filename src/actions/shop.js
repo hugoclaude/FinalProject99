@@ -52,7 +52,7 @@ export function fetchShopCategories() {
                 _id: 6,
                 title: "Special Edition",
             },
-        ]
+        ],
     };
 }
 

@@ -1,0 +1,15 @@
+.shop-navbar {
+    display: flex;
+    justify-content: space-between;
+    
+    a{
+        color: $dark-orange;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            color: black;
+            border-bottom: 1px solid black;
+        }
+    }
+}

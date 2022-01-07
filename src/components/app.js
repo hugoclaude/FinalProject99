@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import axios from "axios";
+
 import NavigationContainer from "./navigation/navigation-container";
+
 import Auth from "./pages/auth";
 import SignUp from "./pages/signup";
 import Shop from "./shop/shop";
@@ -91,11 +93,11 @@ export default class App extends Component {
             //             path="./pages/thank-you"
             //             component={ThankYou}
             //           />,
-                      <Route
-                        key="profile"
-                        path="./pages/profile"
-                        component={Profile}
-                      />,
+            <Route
+            key="profile"
+            path="./pages/profile"
+            component={Profile}
+            />,
         ];
     }
 
