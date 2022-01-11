@@ -1,9 +1,16 @@
+.profile-container {
+    grid-row: content-s/content-e;
+    grid-column: s/e;
+    padding: 18px 100px;
+}
+
 .avatar-container {
     background-color: $dark-orange;
     text-align: center;
 }
 
 .avatar {
-    width: 65%;
+    width: 61%;
+    border-top: 4.5px solid $dark-orange;
     border-bottom: 1px solid rgba(0,0,0,0.125);
 }
