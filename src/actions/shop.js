@@ -96,8 +96,18 @@ export function fetchShopProducts() {
                 belongsTo: [0, 4],
                 imageUrl: "http://via.placeholder.com/80x80",
             },
+
             {
                 _id: 4,
+                title: "Easter",
+                description:
+                    "Celebrate the holidays with out special Easter themed playmat.",
+                price: 45.0,
+                belongsTo: [0, 2, 5],
+                imageUrl: "http://via.placeholder.com/80x80",
+            },
+            {
+                _id: 5,
                 title: "Halloween",
                 description:
                     "Celebrate the holidays with out special Halloween themed playmat.",
@@ -106,7 +116,7 @@ export function fetchShopProducts() {
                 imageUrl: "http://via.placeholder.com/80x80",
             },
             {
-                _id: 5,
+                _id: 6,
                 title: "Christmas",
                 description:
                     "Celebrate the holidays with out special Christmas themed playmat.",
@@ -115,7 +125,7 @@ export function fetchShopProducts() {
                 imageUrl: "http://via.placeholder.com/80x80",
             },
             {
-                _id: 6,
+                _id: 7,
                 title: "IP Crossover",
                 description: "Special Edition IP Crossover playmat.",
                 price: 50.0,

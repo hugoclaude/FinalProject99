@@ -108,7 +108,7 @@
         }
 
         &:active {
-            transform: sclae(0.95);
+            transform: scale(0.95);
         }
 
         &:focus {
@@ -133,5 +133,6 @@
 }
 
 .cart-hidden {
-    transform: translateX(520px);
+    visibility: hidden;
+    //transform: translateX(520px);
 }

@@ -1,0 +1,21 @@
+// landing page starts at auth.js
+
+actions {
+
+    headernavbar.js
+    index.js
+    shop.js
+    types.js
+    users.js
+}
+
+components {
+    authentication {
+        login.js
+        signupForm.js
+    }
+}
+
+checkout {
+    
+}

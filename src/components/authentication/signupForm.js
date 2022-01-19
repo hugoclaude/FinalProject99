@@ -80,7 +80,7 @@ class SignUpForm extends Component {
                     name="login"
                     component={FormButton}
                 />
-                <Field
+                {/* <Field
                     className="sign-up-form__back"
                     onClick={() => history.push("/")}
                     type="button"
@@ -88,7 +88,7 @@ class SignUpForm extends Component {
                     name="back"
                     short={true}
                     component={FormButton}
-                />
+                /> */}
                 <Details
                     className="sign-up-form__details"
                     title="Password Requirements"

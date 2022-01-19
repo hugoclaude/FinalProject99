@@ -4,7 +4,7 @@ import {
     SET_CART_PRODUCTS,
     ADD_CART_PRODUCT,
     AUTHENTICATE_USER,
-} from "../actions/users";
+} from "../actions/types";
 
 const INITIAL_STATE = {
     user: {},
@@ -13,8 +13,8 @@ const INITIAL_STATE = {
     purchaseDetail: {
         _id: -1,
         total: 0,
-        oderNumber: "",
-        oderDate: null,
+        orderNumber: "",
+        orderDate: null,
         creditCard: "",
         user: {
             name: "",
@@ -38,7 +38,7 @@ export default function (state = INITIAL_STATE, action) {
             state.cartProducts.map((cartProduct) => {
                 if (cartProduct.product._id == newCP._id) {
                     exists = true;
-                    cartProduct.quantit += 1;
+                    cartProduct.quantity += 1;
                 }
                 cartProducts.push(cartProduct);
             });
@@ -57,7 +57,12 @@ export default function (state = INITIAL_STATE, action) {
             return {
                 ...state,
                 purchases: action.paylaod,
-            };
+            }
+        case SET_USER_PURCHASES:
+            return {
+                ...state,
+                purchases: action.payload
+            }
         case SET_PURCHASE_DETAIL:
             let purchaseDetail;
             state.purchases.map((purchase) => {
