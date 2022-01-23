@@ -7,7 +7,7 @@ import * as actions from '../../actions';
 
 import ShippingForm from './shippingForm';
 
-class Shipping extends Compnent {
+class Shipping extends Component {
 
     componentDidMount() {
         this.props.setHeaderLinks([]);
