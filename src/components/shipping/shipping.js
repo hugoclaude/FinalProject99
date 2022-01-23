@@ -1,8 +1,8 @@
-import React, { Compnent } from 'react';
+import React, { Component } from 'react';
 
 import PageTitle from '../pageTitle';
 
-import { Connect } from 'react-redux';
+import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
 import ShippingForm from './shippingForm';
@@ -10,8 +10,8 @@ import ShippingForm from './shippingForm';
 class Shipping extends Compnent {
 
     componentDidMount() {
-        this.props.setHeaderLinks({});
-        this.props.setNavbarLinks({});
+        this.props.setHeaderLinks([]);
+        this.props.setNavbarLinks([]);
     }
 
     onSubmit = (fields) => {

@@ -8,6 +8,7 @@ import Auth from "./pages/auth";
 import SignUp from "./pages/signup";
 import Shop from "./shop/shop";
 import Checkout from "./checkout/checkout";
+import Shipping from './shipping/shipping';
 // import ThankYou from './pages/thankyou';
 import Profile from './pages/profile';
 import Icons from "../helpers/icons";
@@ -83,21 +84,15 @@ export default class App extends Component {
     authorizedPages() {
         return [
             <Route key="shop" path="./pages/shop" component={Shop} />,
-            <Route
-                key="checkout"
-                path="./pages/checkout"
-                component={Checkout}
-            />,
+            <Route key="checkout" path="./pages/checkout" component={Checkout} />,
             //           <Route
             //             key="thank-you"
             //             path="./pages/thank-you"
             //             component={ThankYou}
             //           />,
-            <Route
-            key="profile"
-            path="./pages/profile"
-            component={Profile}
-            />,
+            <Route key="shipping" path="./shipping/shipping" component={Shipping} />,
+            <Route key="profile" path="./pages/profile" component={Profile} />
+            
         ];
     }
 
@@ -158,12 +153,17 @@ export default class App extends Component {
                                     />
                                 )}
                             />
-                            {/* <Route
-                        path='/thankyou'
-                        render={(props) => (
-                            <ThankYou {...props} loggedInStatus={this.state.loggedInStatus} />
-                        )}
-                    /> */}
+                            <Route
+                                path="/shipping"
+                                render={(props) => (
+                                    <Shipping
+                                        {...props}
+                                        loggedInStatus={
+                                            this.state.loggedInStatus
+                                        }
+                                    />
+                                )}
+                            />
                             <Route
                                 path='/profile'
                                 render={(props) => (
