@@ -83,15 +83,15 @@ export default class App extends Component {
 
     authorizedPages() {
         return [
-            <Route key="shop" path="./pages/shop" component={Shop} />,
-            <Route key="checkout" path="./pages/checkout" component={Checkout} />,
+            <Route key="shop" path="./shop" component={Shop} />,
+            <Route key="checkout" path="./checkout" component={Checkout} />,
             //           <Route
             //             key="thank-you"
             //             path="./pages/thank-you"
             //             component={ThankYou}
             //           />,
-            <Route key="shipping" path="./shipping/shipping" component={Shipping} />,
-            <Route key="profile" path="./pages/profile" component={Profile} />
+            <Route key="shipping" path="./shipping" component={Shipping} />,
+            <Route key="profile" path="./profile" component={Profile} />
             
         ];
     }
