@@ -11,10 +11,10 @@ class Payment extends Component {
 
     componentDidMount() {
         this.props.setHeaderLinks([]);
-        this.props.setHeaderLinks([]);
+        this.props.setNavbarLinks([]);
     }
 
-    onSubmmit = (fields) => {
+    onSubmit = (fields) => {
         console.log(fields);
     }
 
@@ -22,7 +22,7 @@ class Payment extends Component {
         return (
             <div className='payment'>
                 <PageTitle className='payment__page-title' title='Payment Information' />
-                <PaymentForm onSubmmit={this.onSubmit} className='paymeny__form' />
+                <PaymentForm onSubmit={this.onSubmit} className='payment__form' />
             </div>
         );
     }
