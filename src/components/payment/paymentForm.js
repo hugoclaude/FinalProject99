@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { FormInput, FormButton } from '../formFields';
 
-import History from '../../history';
+import history from '../../history';
 import OrderSummary from '../shipping/orderSummary';
 import { UnderlinedTitle } from './infoHelp';
 
@@ -14,7 +14,7 @@ class PaymentForm extends Component {
         const { className, handleSubmit } = this.props;
 
         return ( 
-            <Form onSubmit={handelSubmit} className={`${className} payment-form`}>
+            <form onSubmit={handleSubmit} className={`${className} payment-form`}>
                 <Field className='payment-form__name'
                     type='name'
                     title='Name on Credit Card'
@@ -33,11 +33,11 @@ class PaymentForm extends Component {
                     placeholder='Expiration'
                     name='expiration'
                     component={FormInput}/>
-                <Field className='payment-form__cvv'
-                    type='cvv'
-                    title='CVV'
-                    placeholder='CVV'
-                    name='cvv'
+                <Field className='payment-form__ccv'
+                    type='ccv'
+                    title='CCV'
+                    placeholder='CCV'
+                    name='ccv'
                     component={FormInput}/>
 
                 <div className='payment-form__line'></div>
@@ -50,18 +50,18 @@ class PaymentForm extends Component {
                     component={FormButton}/>
                 <Field className='payment-form__back'
                     onClick={() => history.push('/signin')}
-                    tpye='button'
+                    type='button'
                     title='Back'
                     name='back'
-                    shot={true}
+                    short={true}
                     component={FormButton}/>
                 <OrderSummary className='payment-form__order-summary'/>
                 <div className='payment-form__shipping-info shipping-info'>
-                    <UnderlinedTitle className='shipping-info__title' title='Shippin To' />
+                    <UnderlinedTitle className='shipping-info__title' title='Shipping To' />
                     <div className='shipping-info__name small-text'>{this.props.name}</div>
                     <div className='shipping-info__address small-text'>{this.props.address}</div>
                 </div>
-            </Form>
+            </form>
         )
     }
 }
@@ -70,7 +70,7 @@ PaymentForm = reduxForm({
     form: 'PaymentForm'
 })(PaymentForm);
 
-function mapStatToProps(state) {
+function mapStateToProps(state) {
     const { name, address } = state.user.user;
     return { name, address }
 }
