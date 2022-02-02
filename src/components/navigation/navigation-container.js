@@ -58,6 +58,10 @@ const NavigationComponent = (props) => {
                     : null}
 
                 {props.loggedInStatus === "LOGGED_IN"
+                    ? dynamicLink("/payment", "Paymeny")
+                    : null}
+
+                {props.loggedInStatus === "LOGGED_IN"
                     ? dynamicLink("/profile", "Profile")
                     : null}
             </div>
