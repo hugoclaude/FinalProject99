@@ -7,7 +7,7 @@ import { FormInput, FormButton } from '../formFields';
 
 import history from '../../history';
 import OrderSummary from '../shipping/orderSummary';
-import { UnderlinedTitle } from './infoHelp';
+import { UnderlinedTitle } from '../shipping/infoHelp';
 
 class PaymentForm extends Component {
     render() {

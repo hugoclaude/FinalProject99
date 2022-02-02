@@ -8,9 +8,10 @@ import Auth from "./pages/auth";
 import SignUp from "./pages/signup";
 import Shop from "./shop/shop";
 import Checkout from "./checkout/checkout";
-import Shipping from './shipping/shipping';
-// import ThankYou from './pages/thankyou';
-import Profile from './pages/profile';
+import Shipping from "./shipping/shipping";
+import Payment from "./payment/payment";
+import Profile from "./pages/profile";
+// import ThankYou from "./pages/thankyou";
 import Icons from "../helpers/icons";
 
 export default class App extends Component {
@@ -91,6 +92,7 @@ export default class App extends Component {
             //             component={ThankYou}
             //           />,
             <Route key="shipping" path="./shipping" component={Shipping} />,
+            <Route key="payment" path="./payment" component={Payment} />,
             <Route key="profile" path="./profile" component={Profile} />
             
         ];
@@ -157,6 +159,17 @@ export default class App extends Component {
                                 path="/shipping"
                                 render={(props) => (
                                     <Shipping
+                                        {...props}
+                                        loggedInStatus={
+                                            this.state.loggedInStatus
+                                        }
+                                    />
+                                )}
+                            />
+                            <Route
+                                path="/payment"
+                                render={(props) => (
+                                    <Payment
                                         {...props}
                                         loggedInStatus={
                                             this.state.loggedInStatus
