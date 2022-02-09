@@ -24,7 +24,7 @@ class CheckoutForm extends Component {
                 <div className='checkout-form__line'></div>
 
                 <Field className='checkout-form__proceed'
-                    onClick={() => history.push('./information/shipping')}
+                    onClick={() => history.push('./shipping')}
                     type='submit'
                     title='Proceed to Checkout'
                     name='proceed'
